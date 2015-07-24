@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@drawable/second_activity"
+    android:id="@+id/rep">
+
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/back"
+        android:src="@drawable/back"
+        android:background="#ffd9dcde"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton2"
+        android:layout_alignBottom="@+id/back"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/repk"
+        android:baselineAlignBottom="true"
+        android:background="#ffd9dcde" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lampe"
+        android:src="@drawable/rep_lampe"
+        android:background="#ffffffff"
+        android:layout_above="@+id/tuer"
+        android:layout_toLeftOf="@+id/imageButton2"
+        android:layout_toStartOf="@+id/imageButton2"
+        android:layout_marginBottom="30dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sanitaer"
+        android:src="@drawable/rep_sanitaer"
+        android:layout_alignTop="@+id/lampe"
+        android:layout_toRightOf="@+id/imageButton2"
+        android:layout_toEndOf="@+id/imageButton2"
+        android:background="#ffffffff" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tuer"
+        android:src="@drawable/rep_tuerfenster"
+        android:background="#ffffffff"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/lampe"
+        android:layout_alignStart="@+id/lampe" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/boden"
+        android:layout_alignTop="@+id/tuer"
+        android:layout_alignLeft="@+id/sanitaer"
+        android:layout_alignStart="@+id/sanitaer"
+        android:src="@drawable/rep_behaelter"
+        android:background="#ffffffff" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sonstige"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/rep_sonstige"
+        android:background="#ffffffff"
+        android:layout_below="@+id/tuer"
+        android:layout_alignLeft="@+id/tuer"
+        android:layout_alignStart="@+id/tuer" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/info"
+        android:src="@drawable/info_k"
+        android:background="#ff02365a"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

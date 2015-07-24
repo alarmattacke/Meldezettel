@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@drawable/second_activity"
+    android:id="@+id/rei">
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton4"
+        android:src="@drawable/reinigung_klein"
+        android:layout_alignWithParentIfMissing="false"
+        android:adjustViewBounds="true"
+        android:background="#ffd9dcde"
+        android:layout_alignTop="@+id/back"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/boden"
+        android:src="@drawable/boden"
+        android:clickable="true"
+        android:background="#ffffffff"
+        android:layout_marginBottom="30dp"
+        android:layout_above="@+id/hoch"
+        android:layout_toLeftOf="@+id/imageButton4"
+        android:layout_toStartOf="@+id/imageButton4" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tuer"
+        android:src="@drawable/glas"
+        android:layout_gravity="right"
+        android:clickable="true"
+        android:background="#ffffffff"
+        android:layout_alignTop="@+id/boden"
+        android:layout_toRightOf="@+id/boden"
+        android:layout_toEndOf="@+id/boden"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/hoch"
+        android:src="@drawable/hoch"
+        android:layout_gravity="right"
+        android:clickable="true"
+        android:background="#ffffffff"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/boden"
+        android:layout_alignStart="@+id/boden" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spezial"
+        android:src="@drawable/spezial"
+        android:layout_gravity="right"
+        android:clickable="true"
+        android:background="#ffffffff"
+        android:layout_alignTop="@+id/hoch"
+        android:layout_alignLeft="@+id/tuer"
+        android:layout_alignStart="@+id/tuer" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/back"
+        android:src="@drawable/back"
+        android:layout_alignWithParentIfMissing="false"
+        android:background="#ffd9dcde"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/schloss"
+        android:src="@drawable/rep_verschlossen"
+        android:layout_gravity="right"
+        android:clickable="true"
+        android:background="#ffffffff"
+        android:layout_marginTop="32dp"
+        android:layout_below="@+id/hoch"
+        android:layout_alignLeft="@+id/hoch"
+        android:layout_alignStart="@+id/hoch" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/info"
+        android:src="@drawable/info_k"
+        android:background="#ff02365a"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

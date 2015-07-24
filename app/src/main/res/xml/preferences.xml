@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference android:title="Absender"
+        android:key="absender"
+        android:summary="Bitte tragen Sie ihre Absender-Email ein."></EditTextPreference>
+    <EditTextPreference android:title="Empfänger 1"
+        android:key="empfaenger1"
+        android:summary="Bitte tragen Sie die Empfänger-Email ein."></EditTextPreference>
+    <EditTextPreference android:title="Empfänger 2"
+        android:key="empfaenger2"
+        android:summary="Sie können eine weitere Empfänger-Email eintragen."></EditTextPreference>
+
+</PreferenceScreen>
