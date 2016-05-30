@@ -24,11 +24,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:id="@+id/textView"
+        android:id="@+id/infoLampe"
         android:layout_alignBottom="@+id/imageView3"
         android:layout_centerHorizontal="true"
         android:textColor="#ff000000"
-        android:text="kaputte Lampe" />
+        android:text="@string/infoLampe" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -44,12 +44,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="undichter Behälter / Armatur"
-        android:id="@+id/textView2"
+        android:text="@string/infoUndicht"
+        android:id="@+id/infoUndicht"
         android:textColor="#ff000000"
         android:layout_alignBottom="@+id/imageView4"
-        android:layout_alignLeft="@+id/textView"
-        android:layout_alignStart="@+id/textView" />
+        android:layout_alignLeft="@+id/infoLampe"
+        android:layout_alignStart="@+id/infoLampe" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -65,12 +65,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Reperatur im Santär-Bereich"
-        android:id="@+id/textView3"
+        android:text="@string/infoSanitär"
+        android:id="@+id/infoSanitär"
         android:textColor="#ff000000"
-        android:layout_alignBottom="@+id/imageView5"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_alignStart="@+id/textView2" />
+        android:layout_alignLeft="@+id/infoUndicht"
+        android:layout_alignStart="@+id/infoUndicht"
+        android:singleLine="false"
+        android:layout_alignBottom="@+id/imageView5" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -86,12 +87,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="defekte Tür / Fenster"
-        android:id="@+id/textView4"
+        android:text="@string/infoDefekt"
+        android:id="@+id/infoDefekt"
         android:textColor="#ff000000"
         android:layout_alignBottom="@+id/imageView6"
-        android:layout_alignLeft="@+id/textView3"
-        android:layout_alignStart="@+id/textView3" />
+        android:layout_alignLeft="@+id/infoSanitär"
+        android:layout_alignStart="@+id/infoSanitär" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -107,10 +108,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="sonstiger Bedarf"
-        android:id="@+id/textView5"
+        android:text="@string/infoSonstig"
+        android:id="@+id/infoSonstig"
         android:textColor="#ff000000"
         android:layout_alignBottom="@+id/imageView7"
-        android:layout_alignLeft="@+id/textView4"
-        android:layout_alignStart="@+id/textView4" />
+        android:layout_alignLeft="@+id/infoDefekt"
+        android:layout_alignStart="@+id/infoDefekt" />
 </RelativeLayout>

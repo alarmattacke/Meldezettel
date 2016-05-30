@@ -9,7 +9,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.preference.PreferenceManager;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -187,8 +186,6 @@ public class Cam extends Activity {
     }
 
     protected void sendEmail() {
-        Log.i("Sende Mail", "");
-
         SharedPreferences SP = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         String abs_email = SP.getString("absender", "");
 
@@ -201,18 +198,17 @@ public class Cam extends Activity {
 
         emailIntent.putExtra(Intent.EXTRA_EMAIL, TO);
         emailIntent.putExtra(Intent.EXTRA_CC, CC);
-        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Meldezettel / Ticketerstellung");
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, getResources().getString(R.string.subject));
 
-        String content = "Sehr geehrte Damen und Herren \n\n\n";
-        content += "Bitte Ticket gemäss folgenden Eckdaten eröffnen \n\n" ;
-        content += "Meldungsart:  Meldezettel \n\n";
-        content += "Meldende Pers.:  " + abs_email + " \n\n";
-        content += "Bedarf:  " + bedarf + "\n";
-        content += "Task Force:  " + task_force + "\n";
-        content += "Arbeiten:  " + arbeiten + "\n";
-        content += "Standort:  " + standort+ "\n";
-        content += "Beschreibung:  " + beschreibung + "\n";
-
+        String content = getResources().getString(R.string.content0) + "\n\n\n";
+        content += getResources().getString(R.string.content1) + "\n\n" ;
+        content += getResources().getString(R.string.content2) + "  Meldezettel" + "\n\n";
+        content += getResources().getString(R.string.content3) + "  " + abs_email + "\n\n";
+        content += getResources().getString(R.string.content4) + "  " + bedarf + "\n";
+        content += getResources().getString(R.string.content5) + "  " + task_force + "\n";
+        content += getResources().getString(R.string.content6) + "  " + arbeiten + "\n";
+        content += getResources().getString(R.string.content7) + "  " + standort + "\n";
+        content += getResources().getString(R.string.content8) + "  " + beschreibung + "\n";
 
         emailIntent.putExtra(Intent.EXTRA_TEXT, content);
         emailIntent.setType("image/jpeg");
@@ -223,13 +219,12 @@ public class Cam extends Activity {
         }
 
         try {
-            startActivity(Intent.createChooser(emailIntent, "Sende Mail..."));
+            startActivity(Intent.createChooser(emailIntent, getResources().getString(R.string.send_mail)));
 
             finish();
-            Log.i("Mail gesendet...", "");
         } catch (android.content.ActivityNotFoundException ex) {
             Toast.makeText(Cam.this,
-                    "Kein Mailclient installiert.", Toast.LENGTH_SHORT).show();
+                    getResources().getString(R.string.no_mail_client), Toast.LENGTH_SHORT).show();
         }
 
 

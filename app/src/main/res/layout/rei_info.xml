@@ -12,20 +12,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView3"
-        android:layout_marginTop="66dp"
+        android:layout_marginTop="67dp"
         android:src="@drawable/reik_boden"
         android:layout_alignParentTop="true"
-        android:layout_toLeftOf="@+id/textView"
-        android:layout_toStartOf="@+id/textView"
-        android:layout_marginRight="30dp"
-        android:layout_marginEnd="30dp" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="33dp"
+        android:layout_marginStart="33dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Bodenreinigung"
-        android:id="@+id/textView"
+        android:text="@string/infoBoden"
+        android:id="@+id/infoBoden"
         android:layout_alignBottom="@+id/imageView3"
         android:layout_centerHorizontal="true"
         android:textColor="#ff000000" />
@@ -40,17 +40,6 @@
         android:layout_alignLeft="@+id/imageView3"
         android:layout_alignStart="@+id/imageView3" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Glasreinigung"
-        android:id="@+id/textView2"
-        android:textColor="#ff000000"
-        android:layout_alignBottom="@+id/imageView4"
-        android:layout_alignLeft="@+id/textView"
-        android:layout_alignStart="@+id/textView" />
-
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -60,6 +49,17 @@
         android:layout_alignLeft="@+id/imageView4"
         android:layout_alignStart="@+id/imageView4"
         android:layout_marginTop="32dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/infoGlas"
+        android:id="@+id/infoGlas"
+        android:textColor="#ff000000"
+        android:layout_alignBottom="@+id/imageView4"
+        android:layout_alignLeft="@+id/infoBoden"
+        android:layout_alignStart="@+id/infoBoden" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -85,32 +85,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Spezialreinigung"
-        android:id="@+id/textView6"
+        android:text="@string/infoSpezial"
+        android:id="@+id/infoSpezial"
         android:textColor="#ff000000"
         android:layout_above="@+id/imageView9"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_alignStart="@+id/textView2" />
+        android:layout_alignLeft="@+id/infoGlas"
+        android:layout_alignStart="@+id/infoGlas" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Arbeiten in der Höhe"
-        android:id="@+id/textView7"
+        android:text="@string/infoHoch"
+        android:id="@+id/infoHoch"
         android:textColor="#ff000000"
         android:layout_alignBottom="@+id/imageView9"
-        android:layout_alignLeft="@+id/textView6"
-        android:layout_alignStart="@+id/textView6" />
+        android:layout_alignLeft="@+id/infoSpezial"
+        android:layout_alignStart="@+id/infoSpezial" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Raum verschlossen / belegt"
-        android:id="@+id/textView8"
+        android:text="@string/infoVerschlossen"
+        android:id="@+id/infoVerschlossen"
         android:textColor="#ff000000"
         android:layout_alignBottom="@+id/imageView10"
-        android:layout_alignLeft="@+id/textView7"
-        android:layout_alignStart="@+id/textView7" />
+        android:layout_alignLeft="@+id/infoHoch"
+        android:layout_alignStart="@+id/infoHoch" />
 </RelativeLayout>

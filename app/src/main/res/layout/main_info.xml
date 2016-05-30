@@ -24,8 +24,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Reparaturbedarf"
-        android:id="@+id/textView"
+        android:text="@string/infoReparatur"
+        android:id="@+id/infoReparatur"
         android:layout_alignBottom="@+id/imageView3"
         android:layout_centerHorizontal="true"
         android:textColor="#ff000000" />
@@ -44,10 +44,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Reinigungsbedarf"
-        android:id="@+id/textView2"
+        android:text="@string/infoReinigung"
+        android:id="@+id/infoReinigung"
         android:textColor="#ff000000"
         android:layout_alignBottom="@+id/imageView4"
-        android:layout_alignLeft="@+id/textView"
-        android:layout_alignStart="@+id/textView" />
+        android:layout_alignLeft="@+id/infoReparatur"
+        android:layout_alignStart="@+id/infoReparatur" />
 </RelativeLayout>
