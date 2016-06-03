@@ -112,11 +112,8 @@ public class Cam extends Activity {
     }
 
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-
         if (data.getExtras() != null) {
             Bitmap photo = (Bitmap) data.getExtras().get("data");
-
-
 
             File imagesFolder;
             ByteArrayOutputStream bytes = new ByteArrayOutputStream();
@@ -138,14 +135,10 @@ public class Cam extends Activity {
                     try {
                         myfile = File.createTempFile("Image_Name", ".jpeg", imagesFolder);
                         FileOutputStream out = new FileOutputStream(myfile);
-
-
                         out.write(bytes.toByteArray());
                         out.flush();
                         out.close();
-
                         Intent mediaScanIntent = new Intent("android.intent.action.MEDIA_SCANNER_SCAN_FILE");
-
                         Uri contentUri = Uri.fromFile(myfile);
                         mediaScanIntent.setData(contentUri);
                         this.sendBroadcast(mediaScanIntent);
@@ -188,17 +181,15 @@ public class Cam extends Activity {
 
     protected void sendEmail() {
         Log.i("Sende Mail", "");
-
         SharedPreferences SP = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
-        String abs_email = SP.getString("absender", "");
 
+        String abs_email = SP.getString("absender", "");
         String[] TO = {SP.getString("empfaenger1", "")};
         String[] CC = {SP.getString("empfaenger2", "")};
 
         Intent emailIntent = new Intent(Intent.ACTION_SEND);
         emailIntent.setData(Uri.parse("mailto:"));
         emailIntent.setType("text/plain");
-
         emailIntent.putExtra(Intent.EXTRA_EMAIL, TO);
         emailIntent.putExtra(Intent.EXTRA_CC, CC);
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Meldezettel / Ticketerstellung");
@@ -212,7 +203,6 @@ public class Cam extends Activity {
         content += "Arbeiten:  " + arbeiten + "\n";
         content += "Standort:  " + standort+ "\n";
         content += "Beschreibung:  " + beschreibung + "\n";
-
 
         emailIntent.putExtra(Intent.EXTRA_TEXT, content);
         emailIntent.setType("image/jpeg");
@@ -231,11 +221,7 @@ public class Cam extends Activity {
             Toast.makeText(Cam.this,
                     "Kein Mailclient installiert.", Toast.LENGTH_SHORT).show();
         }
-
-
     }
-
-
 }
 
 
