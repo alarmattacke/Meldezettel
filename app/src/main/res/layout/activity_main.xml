@@ -4,7 +4,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
-    android:background="@drawable/main_activity"
+    android:background="@drawable/second_activity"
     android:id="@+id/activity"
     >
 
@@ -48,5 +48,15 @@
         android:layout_alignParentStart="true"
         android:src="@drawable/info_k"
         android:background="#ff02365a" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lblAppName"
+        android:id="@+id/lblAppName"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/meldezettel"
+        android:textColor="#ff000000" />
 
 </RelativeLayout>

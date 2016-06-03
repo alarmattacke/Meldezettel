@@ -27,7 +27,6 @@ public class MainActivity extends Activity {
             }
         });
 
-
         final ImageButton imgInfo =(ImageButton)findViewById(R.id.info);
         imgInfo.setOnClickListener(new View.OnClickListener(){
 
@@ -39,19 +38,12 @@ public class MainActivity extends Activity {
             }
         });
 
-
-
-
         imgRep.setOnLongClickListener(new View.OnLongClickListener() {
             public boolean onLongClick(View v) {
                 Toast.makeText(v.getContext(), "Reparaturbedarf", Toast.LENGTH_SHORT).show();
                 return true;
             }
         });
-
-
-
-
 
         final ImageButton imgSettings =(ImageButton)findViewById(R.id.settings);
         imgSettings.setOnClickListener(new View.OnClickListener(){
@@ -63,8 +55,6 @@ public class MainActivity extends Activity {
 
             }
         });
-
-
 
         final ImageButton imgRei =(ImageButton)findViewById(R.id.btn_rei);
         imgRei.setOnClickListener(new View.OnClickListener(){
@@ -85,7 +75,5 @@ public class MainActivity extends Activity {
                 return true;
             }
         });
-
     }
-
 }
