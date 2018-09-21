@@ -1,32 +1,27 @@
 package com.gecko.meldezettel;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 
 /**
  * Created by adnan on 20.04.15.
  */
-public class Rei extends Activity {
+public class Rei extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.rei);
         final String value = getIntent().getStringExtra("reip");
 
-        final ImageButton imgBack =(ImageButton)findViewById(R.id.back);
-        imgBack.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View view) {
-                Intent act_main = new Intent(view.getContext(),MainActivity.class);
-                startActivity(act_main);
-
-            }
-        });
-
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        setSupportActionBar(myToolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         final ImageButton imgRei =(ImageButton)findViewById(R.id.schloss);
         imgRei.setOnClickListener(new View.OnClickListener(){
@@ -109,4 +104,16 @@ public class Rei extends Activity {
         });
 
     }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
 }

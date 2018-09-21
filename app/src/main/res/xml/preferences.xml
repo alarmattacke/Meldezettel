@@ -2,11 +2,17 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <EditTextPreference android:title="@string/from"
         android:key="absender"
-        android:summary="@string/from_text"></EditTextPreference>
+        android:summary="@string/from_text" />
     <EditTextPreference android:title="@string/to1"
         android:key="empfaenger1"
-        android:summary="@string/to1_text"></EditTextPreference>
+        android:summary="@string/to1_text" />
     <EditTextPreference android:title="@string/to2"
         android:key="empfaenger2"
-        android:summary="@string/to2_text"></EditTextPreference>
+        android:summary="@string/to2_text"/>
+    <EditTextPreference android:title="@string/serviceURL"
+        android:key="serviceURL"
+        android:summary="@string/serviceURL"/>
+    <EditTextPreference android:title="@string/mandate"
+        android:key="mandate"
+        android:summary="@string/mandate"/>
 </PreferenceScreen>
